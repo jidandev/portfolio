@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio V2</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <section class="home" id="home">
+            <h1 data-aos="fade-in" data-aos-duration="3000">Halo, saya Jidan!</h1>
+            <p data-aos="fade-in" data-aos-duration="3000">Pengembang web pemula yang senang belajar dan membuat proyek keren. Jelajahi portofolio saya dan lihat beberapa karya saya. Hubungi saya jika tertarik untuk berkolaborasi!</p>
+        </section>
+    </header>
+    <main>
+        <section class="about" id="about">
+            <div>
+                <div></div>
+                <h1 data-aos="fade-in" data-aos-duration="3000">JIDAN</h1>
+                <p data-aos="fade-in" data-aos-duration="3000">FRONTEND DEVELOPER</p>
+            </div>
+            <section>
+            <h1 data-aos="fade-in" data-aos-duration="3000">ABOUT ME</h1>
+            <p data-aos="fade-in" data-aos-duration="3000">Halo! Saya Jidan, seorang pengembang web pemula dengan semangat untuk belajar dan menciptakan solusi teknologi yang menarik. Saya sedang berada di tahap awal perjalanan karir saya, dan selama ini saya telah berfokus pada pembelajaran berbagai bahasa pemrograman dan teknologi web.<br><br>Terima kasih telah mengunjungi portofolio saya. Jangan ragu untuk menghubungi saya melalui <a href="https://wa.me/6285772506503?text=Halo">WhatsApp</a> jika ada pertanyaan atau peluang kerjasama. Saya sangat menantikan untuk terhubung dengan Anda!</p>
+            </section>
+        </section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <section class="project" id="project">
+            <h1 data-aos="fade-in" data-aos-duration="3000">PROJECT</h1>
+            <ul data-aos="fade-right" data-aos-duration="1000">
+                <li >
+                    <img src="notepad.png" alt="">
+                    <h1>NotePad</h1>
+                    <a class="demo" href="https://jidandev.github.io/NotePad/">Demo Project</a>
+                    <a class="github" href="https://github.com/jidandev/NotePad/">Github</a>
+                </li>
+                
+            </ul>
+        </section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <section class="skils" id="skils">
+            <h1 data-aos="fade-in" data-aos-duration="3000">SKILS</h1>
+            <ul data-aos="fade-in" data-aos-duration="1000">
+                <li><img src="html.png" alt=""></li>
+                <li><img src="css.png" alt=""></li>
+                <li><img src="js.png" alt=""></li>
+    
+            </ul>
+        </section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <section class="contact" id="contact">
+            <h1>CONTACT</h1>
+            <ul>
+                <li><a href="https://wa.me/6285772506503?text=Halo"><img src="wa.png" alt="whatsapp"></a></li>
+                <li><a href="https://github.com/jidandev"><img class="githubimg" src="github.png" alt="github"></a></li>
+                <li><a href="https://www.instagram.com/jidannn_.00?igsh=MXhuanVicXcwZGg3ZQ=="><img src="instagram.png" alt="instagram"></a></li>
+                
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+
+                <li class="homenav" onclick="smoothScroll(event,'#home')"><ion-icon name="home-outline"></ion-icon></li>
+                <li class="aboutnav" onclick="smoothScroll(event,'#about')"><ion-icon name="person-circle-outline"></ion-icon></li>
+                <li class="projectnav" onclick="smoothScroll(event,'#project')"><ion-icon name="folder-outline"></ion-icon></li>
+                <li class="skilsnav" onclick="smoothScroll(event,'#skils')"><ion-icon name="code-slash-outline"></ion-icon></li>
+                <li class="contactnav" onclick="smoothScroll(event,'#contact')"><ion-icon name="mail-outline"></ion-icon></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- ICON -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

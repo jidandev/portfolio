@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+:root {
+    --primary-color: #1E1E1E;
+    --secondary-color: #2D2D2D;
+    --accent-color: #7F8C8D;
+    --text-color: #E0E0E0;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-weight-bold: 700;
+    --font-weight-semi-bold: 600;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: visible; 
+    background-color: var(--primary-color);
+}
+
+
+@media only screen and (max-width: 480px) {
+    main {
+        height: 420vh;
+        overflow: hidden;
+    }
+    nav {
+        position: fixed;
+        bottom: 0;
+        left: 4.6%;
+        z-index: 1000;
+        will-change: transform;
+    }
+    nav ul {
+        
+        width: 85%;
+        height: 60px;
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    nav ul li a {
+        color: var(--text-color);
+    }
+
+    nav ul li {
+        position: relative;
+        right: 15px;
+        top: 5px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--accent-color);
+        margin-right: 10px;
+        color: var(--text-color);
+        list-style: none;
+        text-align: center;
+        padding-top: 15px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        transition: all .3s ease;
+    }
+
+    .home {
+        position: relative;
+        top: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .home h1 {
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-bold);
+        color: var(--text-color);
+        display: inline-block;        
+        border-bottom: 2px solid var(--text-color); 
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .home p {
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-semi-bold);
+        color: var(--text-color);
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .about {
+        position: relative;
+        top: 620px;
+    }
+
+    .about div {
+        position: relative;
+        top: -110px;
+        left: 25px;
+        width: 300px;
+        height: 120px;
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .about div div{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 100px;
+        height: 100px;
+        background-color: var(--accent-color);
+        border-radius: 10px;
+    }
+
+    .about div h1 {
+        position: absolute;
+        top: -10px;
+        left: 140px;
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-bold);
+        color: var(--text-color);
+        display: inline-block;        
+        border-bottom: 2px solid var(--text-color); 
+        padding-bottom: 0;
+        text-align: left;
+    }
+
+    .about div p {
+        position: absolute;
+        top: 55px;
+        left: 140px;
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-semi-bold);
+        color: var(--text-color);
+        text-align: left;
+    }
+
+    .about section {
+        position: relative;
+        top: -50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about h1 {
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-bold);
+        color: var(--text-color);
+        display: inline-block;        
+        border-bottom: 2px solid var(--text-color); 
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .about p {
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-semi-bold);
+        color: var(--text-color);
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .project {
+        position: relative;
+        top: 150px;
+    }
+
+    .project h1 {
+        position: absolute;
+        top: -350px;
+        left: 115px;
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-bold);
+        color: var(--text-color);
+        display: inline-block;        
+        border-bottom: 2px solid var(--text-color); 
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .project ul {
+        position: relative;
+        top: -250px;
+        left: -18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .project ul li {
+        position: relative;
+        width: 300px;
+        height: 120px;
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+    }
+
+    .project ul li img{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 100px;
+        height: 100px;
+        background-color: var(--accent-color);
+        border-radius: 10px;
+    }
+
+    .project ul li h1 {
+        position: absolute;
+        top: -10px;
+        left: 140px;
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-bold);
+        color: var(--text-color);
+        display: inline-block;        
+        border-bottom: 2px solid var(--text-color); 
+        padding-bottom: 0;
+        text-align: left;
+    }
+
+    .project ul li a {
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-semi-bold);
+        color: var(--text-color);
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .project ul li .demo {
+        position: absolute;
+        top: 55px;
+        left: 140px;
+    }
+
+    .project ul li .github {
+        position: absolute;
+        top: 85px;
+        left: 140px;
+    }
+
+    .skils {
+        position: relative;
+        top: -370px;
+    }
+
+    .skils h1 {
+        position: absolute;
+        top: -350px;
+        left: 135px;
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-bold);
+        color: var(--text-color);
+        display: inline-block;        
+        border-bottom: 2px solid var(--text-color); 
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .skils ul {
+        position: relative;
+        top: -280px;
+        left: -20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .skils ul li img{
+        width: 90px;
+        height: auto;
+        object-fit: cover;
+        transition: all .3s ease;
+    }
+
+    .skils ul li img:not(:hover) {
+        filter: grayscale(1);
+    }
+
+    .contact {
+
+        position: relative;
+        top: -720px;
+    }
+
+    .contact h1 {
+        position: absolute;
+        top: -350px;
+        left: 110px;
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-bold);
+        color: var(--text-color);
+        display: inline-block;        
+        border-bottom: 2px solid var(--text-color); 
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .contact ul {
+        position: relative;
+        top: -280px;
+        left: -20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 15px;
+        margin-bottom: -1000px;
+    }
+
+    .contact ul li img{
+        width: 90px;
+        height: auto;
+        object-fit: cover;
+        transition: all .3s ease;
+    }
+
+
+    .githubimg {
+        filter: invert(100%);
+    }
+
+    .about p a {
+        color: green;
+        text-decoration: none;
+    }
+
+}

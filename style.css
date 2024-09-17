@@ -203,6 +203,7 @@ body {
         height: 120px;
         background-color: var(--secondary-color);
         border-radius: 10px;
+        list-style: none;
     }
 
     .project ul li img{
@@ -276,6 +277,10 @@ body {
         gap: 15px;
     }
 
+    .skils ul li {
+        list-style: none;
+    }
+
     .skils ul li img{
         width: 90px;
         height: auto;
@@ -315,6 +320,10 @@ body {
         justify-content: flex-start;
         gap: 15px;
         margin-bottom: -1000px;
+    }
+
+    .contact ul li {
+        list-style: none;
     }
 
     .contact ul li img{

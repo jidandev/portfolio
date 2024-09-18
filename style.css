@@ -5,6 +5,10 @@
     --secondary-color: #2D2D2D;
     --accent-color: #7F8C8D;
     --text-color: #E0E0E0;
+    --primary-color-light: #FFFFFF;
+    --secondary-color-light: #F0F0F0; 
+    --accent-color-light: #BDC3C7;
+    --text-color-light: #2C3E50; 
     --font-montserrat: 'Montserrat', sans-serif;
     --font-weight-bold: 700;
     --font-weight-semi-bold: 600;
@@ -18,6 +22,165 @@ html {
 body {
     overflow: visible; 
     background-color: var(--primary-color);
+    transition: all .3s ease;
+}
+
+@media only screen and (min-width: 768px) {
+    nav {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        will-change: transform;
+    }
+    nav ul {
+        
+        width: 90%;
+        height: 80px;
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    nav ul li a {
+        color: var(--text-color);
+    }
+    
+    nav ul li {
+        position: relative;
+        right: 5%;
+        top: 10px;
+        width: 65px;
+        height: 60px;
+        background-color: var(--accent-color);
+        
+        color: var(--text-color);
+        list-style: none;
+        text-align: center;
+        padding-top: 5%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        transition: all .3s ease;
+    }
+    
+    .home {
+        position: relative;
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    .home h1 {
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-bold);
+        color: var(--text-color);
+        display: inline-block;        
+        border-bottom: 2px solid var(--text-color); 
+        padding-bottom: 5px;
+        text-align: center;
+    }
+    
+    .home p {
+        width: 45%;
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-semi-bold);
+        color: var(--text-color);
+        text-align: center;
+        margin-top: -10px;
+    }
+    
+    .about {
+        position: relative;
+        top: 500px;
+    
+    }
+    
+    .about div {
+        position: relative;
+        top: -110px;
+        left: 25px;
+        width: 39%;
+        height: 300px;
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .about div div{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 40%;
+        height: 280px;
+        background-color: var(--accent-color);
+        border-radius: 10px;
+    }
+    
+    .about div h1 {
+        position: absolute;
+        top: -10px;
+        right: 13%;
+        transform: translateX(50%);
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-bold);
+        color: var(--text-color);
+        display: inline-block;        
+        border-bottom: 2px solid var(--text-color); 
+        padding-bottom: 0;
+        text-align: left;
+        font-size: 3.1rem;
+    }
+    
+    .about div p {
+        position: absolute;
+        top: 150px;
+        right: 25%;
+        transform: translateX(50%);
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-semi-bold);
+        color: var(--text-color);
+        text-align: center;
+        font-size: 2    rem;
+    }
+    
+    .about section {
+        position: relative;
+        top: -400px;
+        right: -35%;
+        transform: translateX(50%);
+        height: 80%;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about h1 {
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-bold);
+        color: var(--text-color);
+        display: inline-block;        
+        border-bottom: 2px solid var(--text-color); 
+        padding-bottom: 5px;
+        text-align: center;
+    }
+    
+    .about p {
+        font-family: var(--font-montserrat);
+        font-weight: var(--font-weight-semi-bold);
+        color: var(--text-color);
+        text-align: center;
+        margin-top: -10px;
+    }
 }
 
 
@@ -26,10 +189,17 @@ body {
         height: 420vh;
         overflow: hidden;
     }
+    .tema {
+        font-size: 2.4rem;
+        color: var(--text-color);
+        transition: all .3s ease;
+    }
+      
     nav {
         position: fixed;
         bottom: 0;
-        left: 4.6%;
+        left: 51%;
+        transform: translateX(-50%);
         z-index: 1000;
         will-change: transform;
     }

@@ -9,6 +9,8 @@
     --secondary-color-light: #F0F0F0; 
     --accent-color-light: #BDC3C7;
     --text-color-light: #2C3E50; 
+    --glass-dark: rgba(45, 45, 45, .3);
+    --glass-light: rgba(240, 240, 240, .3);
     --font-montserrat: 'Montserrat', sans-serif;
     --font-weight-bold: 700;
     --font-weight-semi-bold: 600;
@@ -207,7 +209,11 @@ body {
         
         width: 85%;
         height: 60px;
-        background-color: var(--secondary-color);
+        background: rgba(45, 45, 45, 0.4);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(45, 45, 45, 0.3);
         border-radius: 10px;
         display: flex;
         flex-direction: row;
@@ -272,10 +278,15 @@ body {
     .about div {
         position: relative;
         top: -110px;
-        left: 25px;
+        left: 50%;
+        transform: translateX(-50%);
         width: 300px;
         height: 120px;
-        background-color: var(--secondary-color);
+        background: rgba(45, 45, 45, 0.3);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(45, 45, 45, 0.3);
         border-radius: 10px;
         overflow: hidden;
     }
@@ -283,7 +294,8 @@ body {
     .about div div{
         position: absolute;
         top: 10px;
-        left: 10px;
+        left: 20%;
+        transform: translateX(-50%);
         width: 100px;
         height: 100px;
         background-color: var(--accent-color);
@@ -347,7 +359,8 @@ body {
     .project h1 {
         position: absolute;
         top: -350px;
-        left: 115px;
+        left: 35%;
+        transform: translateX(-50%);
         font-family: var(--font-montserrat);
         font-weight: var(--font-weight-bold);
         color: var(--text-color);
@@ -360,7 +373,8 @@ body {
     .project ul {
         position: relative;
         top: -250px;
-        left: -18px;
+        left: -5%;
+        transform: translateX(-50%);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -372,7 +386,11 @@ body {
         position: relative;
         width: 300px;
         height: 120px;
-        background-color: var(--secondary-color);
+        background: rgba(45, 45, 45, 0.4);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(45, 45, 45, 0.3);
         border-radius: 10px;
         list-style: none;
     }
@@ -390,7 +408,8 @@ body {
     .project ul li h1 {
         position: absolute;
         top: -10px;
-        left: 140px;
+        left: 65%;
+        transform: translateX(-50%);
         font-family: var(--font-montserrat);
         font-weight: var(--font-weight-bold);
         color: var(--text-color);
@@ -428,7 +447,8 @@ body {
     .skils h1 {
         position: absolute;
         top: -350px;
-        left: 135px;
+        left: 40%;
+        transform: translateX(-50%);
         font-family: var(--font-montserrat);
         font-weight: var(--font-weight-bold);
         color: var(--text-color);
@@ -441,7 +461,8 @@ body {
     .skils ul {
         position: relative;
         top: -280px;
-        left: -20px;
+        right: 5%;
+        transform: translateX(50%);
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;

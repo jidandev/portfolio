@@ -94,9 +94,9 @@ function smoothScroll(event, targetId) {
     } else if(targetId === "#project") {
         yOffset = -350;
     } else if(targetId === "#skils") {
-        yOffset = -350;
+        yOffset = -200;
     } else if(targetId === "#contact") {
-        yOffset = -500;
+        yOffset = -200;
     }
     
     

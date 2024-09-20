@@ -441,32 +441,29 @@ body {
 
     .skils {
         position: relative;
-        top: -370px;
+        top: -500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .skils h1 {
-        position: absolute;
-        top: -350px;
-        left: 40%;
-        transform: translateX(-50%);
         font-family: var(--font-montserrat);
         font-weight: var(--font-weight-bold);
         color: var(--text-color);
         display: inline-block;        
         border-bottom: 2px solid var(--text-color); 
         padding-bottom: 5px;
-        text-align: center;
+        
     }
 
     .skils ul {
-        position: relative;
-        top: -280px;
-        right: 5%;
-        transform: translateX(50%);
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 15px;
+        padding: 0;
     }
 
     .skils ul li {
@@ -485,15 +482,15 @@ body {
     }
 
     .contact {
-
         position: relative;
-        top: -720px;
+        top: -1100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .contact h1 {
-        position: absolute;
-        top: -350px;
-        left: 110px;
         font-family: var(--font-montserrat);
         font-weight: var(--font-weight-bold);
         color: var(--text-color);
@@ -504,14 +501,11 @@ body {
     }
 
     .contact ul {
-        position: relative;
-        top: -280px;
-        left: -20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 15px;
-        margin-bottom: -1000px;
+        padding: 0;
     }
 
     .contact ul li {

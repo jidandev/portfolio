@@ -90,13 +90,13 @@ function smoothScroll(event, targetId) {
     if(targetId === "#home") {
         yOffset = -300;
     } else if(targetId === "#about") {
-        yOffset = -150;
+        yOffset = -50;
     } else if(targetId === "#project") {
-        yOffset = -350;
+        yOffset = -200;
     } else if(targetId === "#skils") {
         yOffset = -200;
     } else if(targetId === "#contact") {
-        yOffset = -200;
+        yOffset = 10;
     }
     
     

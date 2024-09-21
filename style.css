@@ -188,8 +188,17 @@ body {
 
 @media only screen and (max-width: 480px) {
     main {
-        height: 420vh;
+        position: relative;
+        top: 450px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        gap: 130px;
     }
     .tema {
         font-size: 2.4rem;
@@ -244,7 +253,7 @@ body {
 
     .home {
         position: relative;
-        top: 200px;
+        top: 180px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -271,15 +280,18 @@ body {
     }
 
     .about {
-        position: relative;
-        top: 620px;
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }   
 
     .about div {
-        position: relative;
-        top: -110px;
-        left: 50%;
-        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px; 
         width: 300px;
         height: 120px;
         background: rgba(45, 45, 45, 0.3);
@@ -289,45 +301,45 @@ body {
         border: 1px solid rgba(45, 45, 45, 0.3);
         border-radius: 10px;
         overflow: hidden;
+       
+       
     }
 
     .about div div{
-        position: absolute;
-        top: 10px;
-        left: 20%;
-        transform: translateX(-50%);
-        width: 100px;
+        width: 120px;
         height: 100px;
         background-color: var(--accent-color);
         border-radius: 10px;
+        margin-left: 10px;
+    }
+
+    .about div .container {
+        display: flex;
+        flex-direction: column;
+        
     }
 
     .about div h1 {
-        position: absolute;
-        top: -10px;
-        left: 140px;
+      
         font-family: var(--font-montserrat);
         font-weight: var(--font-weight-bold);
         color: var(--text-color);
         display: inline-block;        
         border-bottom: 2px solid var(--text-color); 
         padding-bottom: 0;
-        text-align: left;
+        
     }
 
     .about div p {
-        position: absolute;
-        top: 55px;
-        left: 140px;
+     
         font-family: var(--font-montserrat);
         font-weight: var(--font-weight-semi-bold);
         color: var(--text-color);
-        text-align: left;
+        
     }
 
     .about section {
-        position: relative;
-        top: -50px;
+       
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -352,15 +364,14 @@ body {
     }
 
     .project {
-        position: relative;
-        top: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .project h1 {
-        position: absolute;
-        top: -350px;
-        left: 35%;
-        transform: translateX(-50%);
+ 
         font-family: var(--font-montserrat);
         font-weight: var(--font-weight-bold);
         color: var(--text-color);
@@ -371,10 +382,7 @@ body {
     }
 
     .project ul {
-        position: relative;
-        top: -250px;
-        left: -5%;
-        transform: translateX(-50%);
+      margin-left: -30px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -383,7 +391,10 @@ body {
     }
 
     .project ul li {
-        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
         width: 300px;
         height: 120px;
         background: rgba(45, 45, 45, 0.4);
@@ -396,52 +407,44 @@ body {
     }
 
     .project ul li img{
-        position: absolute;
-        top: 10px;
-        left: 10px;
+      margin-left: 10px;
         width: 100px;
         height: 100px;
         background-color: var(--accent-color);
         border-radius: 10px;
     }
 
+    .project ul li .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 5px;
+        margin-top: -20px;
+    }
+
     .project ul li h1 {
-        position: absolute;
-        top: -10px;
-        left: 65%;
-        transform: translateX(-50%);
+       
         font-family: var(--font-montserrat);
         font-weight: var(--font-weight-bold);
         color: var(--text-color);
         display: inline-block;        
         border-bottom: 2px solid var(--text-color); 
         padding-bottom: 0;
-        text-align: left;
+        margin-bottom: -1px;
+        
     }
 
     .project ul li a {
         font-family: var(--font-montserrat);
         font-weight: var(--font-weight-semi-bold);
         color: var(--text-color);
-        text-align: left;
+        
         text-decoration: none;
     }
 
-    .project ul li .demo {
-        position: absolute;
-        top: 55px;
-        left: 140px;
-    }
-
-    .project ul li .github {
-        position: absolute;
-        top: 85px;
-        left: 140px;
-    }
-
     .skils {
-        position: relative;
-        top: -500px;
+    
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -482,8 +485,7 @@ body {
     }
 
     .contact {
-        position: relative;
-        top: -1100px;
+     height: 700px;
         display: flex;
         flex-direction: column;
         justify-content: center;

@@ -81,7 +81,7 @@ tema.addEventListener('click', () => {
     }
 })
 
-//NAV
+//SCROLL POSITION
 function smoothScroll(event, targetId) {
     event.preventDefault();
 

@@ -485,7 +485,7 @@ body {
     }
 
     .contact {
-     height: 700px;
+        height: 700px;
         display: flex;
         flex-direction: column;
         justify-content: center;

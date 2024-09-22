@@ -9,10 +9,29 @@ const projectNav = document.querySelector('.projectnav');
 const skilsNav = document.querySelector('.skilsnav');
 const contactNav = document.querySelector('.contactnav');
 const tema = document.querySelector('.tema');
-let temaGelap = true;
+let temaTerang = false;
+
 //TEMA
-tema.addEventListener('click', () => {
-    if(temaGelap) {
+function loadTheme() {
+    let savedTheme = localStorage.getItem('theme');
+    if(savedTheme) {
+        if(savedTheme === "terang") {
+            theme(true);
+            temaTerang = true;
+        } else {
+            theme(false);
+            temaTerang = false;
+        }
+    } else {
+        theme(false);
+        temaTerang = false;
+    }
+}
+
+loadTheme();
+
+function theme(kondisi) {
+    if(kondisi) {
         tema.innerHTML = `<ion-icon name="moon-outline"></ion-icon>`;
         tema.style.color = `var(--text-color-light)`;
         document.body.style.backgroundColor = `var(--primary-color-light)`;
@@ -29,9 +48,9 @@ tema.addEventListener('click', () => {
         document.querySelector('.about div h1').style.color = `var(--text-color-light)`;
         document.querySelector('.about div h1').style.borderColor = `var(--text-color-light)`;
         document.querySelector('.about div p').style.color = `var(--text-color-light)`;
-        document.querySelector('.about section h1').style.color = `var(--text-color-light)`;
-        document.querySelector('.about section h1').style.borderColor = `var(--text-color-light)`;
-        document.querySelector('.about section p').style.color = `var(--text-color-light)`;
+        document.querySelector('.about .isi h1').style.color = `var(--text-color-light)`;
+        document.querySelector('.about .isi h1').style.borderColor = `var(--text-color-light)`;
+        document.querySelector('.about .isi p').style.color = `var(--text-color-light)`;
         document.querySelector('.project h1').style.color = `var(--text-color-light)`;
         document.querySelector('.project h1').style.borderColor = `var(--text-color-light)`;
         document.querySelector('.project ul li').style.background = `var(--glass-light)`;
@@ -44,7 +63,6 @@ tema.addEventListener('click', () => {
         document.querySelector('.contact h1').style.color = `var(--text-color-light)`;
         document.querySelector('.contact h1').style.borderColor = `var(--text-color-light)`;
         document.querySelector('.githubimg').style.filter = `invert(0%)`;
-        temaGelap = false;
     } else {
         tema.innerHTML = `<ion-icon name="sunny-outline"></ion-icon>`
         tema.style.color = `var(--text-color)`;
@@ -62,9 +80,9 @@ tema.addEventListener('click', () => {
         document.querySelector('.about div h1').style.color = `var(--text-color)`;
         document.querySelector('.about div h1').style.borderColor = `var(--text-color)`;
         document.querySelector('.about div p').style.color = `var(--text-color)`;
-        document.querySelector('.about section h1').style.color = `var(--text-color)`;
-        document.querySelector('.about section h1').style.borderColor = `var(--text-color)`;
-        document.querySelector('.about section p').style.color = `var(--text-color)`;
+        document.querySelector('.about .isi h1').style.color = `var(--text-color)`;
+        document.querySelector('.about .isi h1').style.borderColor = `var(--text-color)`;
+        document.querySelector('.about .isi p').style.color = `var(--text-color)`;
         document.querySelector('.project h1').style.color = `var(--text-color)`;
         document.querySelector('.project h1').style.borderColor = `var(--text-color)`;
         document.querySelector('.project ul li').style.background = `var(--glass-dark)`;
@@ -77,9 +95,45 @@ tema.addEventListener('click', () => {
         document.querySelector('.contact h1').style.color = `var(--text-color)`;
         document.querySelector('.contact h1').style.borderColor = `var(--text-color)`;
         document.querySelector('.githubimg').style.filter = `invert(100%)`;
-        temaGelap = true;
+    }
+}
+
+tema.addEventListener('click', () => {
+    if(!temaTerang) {
+        theme(true);
+        localStorage.setItem('theme', "terang");
+        temaTerang = true;
+    } else {
+        theme(false);
+        localStorage.setItem('theme', "gelap");
+        temaTerang = false;
     }
 })
+
+let scrollHome = -300;
+let scrollAbout = -50;
+let scrollProject = -200;
+let scrollSkils = -200;
+let scrollContact = 10;
+//SCREEN SIZE
+function checkScreenSize() {
+    if (window.matchMedia('(min-width: 481px)').matches) {
+        scrollHome = -300;
+        scrollAbout = -100;
+        scrollProject = -50;
+        scrollSkils = -100;
+        scrollContact = 110;
+        
+    } else {
+        scrollHome = -300;
+        scrollAbout = -50;
+        scrollProject = -200;
+        scrollSkils = -200;
+        scrollContact = 10;
+    }
+}
+
+checkScreenSize();
 
 //SCROLL POSITION
 function smoothScroll(event, targetId) {
@@ -88,15 +142,15 @@ function smoothScroll(event, targetId) {
     const targetElement = document.querySelector(targetId);
     let yOffset = 0;
     if(targetId === "#home") {
-        yOffset = -300;
+        yOffset = scrollHome;
     } else if(targetId === "#about") {
-        yOffset = -50;
+        yOffset = scrollAbout;
     } else if(targetId === "#project") {
-        yOffset = -200;
+        yOffset = scrollProject;
     } else if(targetId === "#skils") {
-        yOffset = -200;
+        yOffset = scrollSkils;
     } else if(targetId === "#contact") {
-        yOffset = 10;
+        yOffset = scrollContact;
     }
     
     
@@ -134,7 +188,7 @@ const aboutObserver = new IntersectionObserver((entries) => {
     }
 }, {threshold: 0.9});
 
-aboutObserver.observe(about);
+aboutObserver.observe(document.querySelector('.about .isi h1'));
 
 //PROJECT
 const projectObserver = new IntersectionObserver((entries) => {
@@ -177,3 +231,6 @@ const contactObserver = new IntersectionObserver((entries) => {
 }, {threshold: 0.9});
 
 contactObserver.observe(contact);
+
+window.addEventListener('resize', checkScreenSize);
+

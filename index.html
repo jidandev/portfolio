@@ -24,7 +24,7 @@
                     <p data-aos="fade-in" data-aos-duration="3000">FRONTEND DEVELOPER</p>
                 </section>
             </div>
-            <section>
+            <section class="isi">
             <h1 data-aos="fade-in" data-aos-duration="3000">ABOUT ME</h1>
             <p data-aos="fade-in" data-aos-duration="3000">Halo! Saya Jidan, seorang pengembang web pemula dengan semangat untuk belajar dan menciptakan solusi teknologi yang menarik. Saya sedang berada di tahap awal perjalanan karir saya, dan selama ini saya telah berfokus pada pembelajaran berbagai bahasa pemrograman dan teknologi web.<br><br>Terima kasih telah mengunjungi portofolio saya. Jangan ragu untuk menghubungi saya melalui <a href="https://wa.me/6285772506503?text=Halo">WhatsApp</a> jika ada pertanyaan atau peluang kerjasama. Saya sangat menantikan untuk terhubung dengan Anda!</p>
             </section>
@@ -33,7 +33,11 @@
             <h1 data-aos="fade-in" data-aos-duration="3000">PROJECT</h1>
             <ul data-aos="fade-right" data-aos-duration="1000">
                 <li >
-                    <img src="notepad.png" alt="">
+                    <picture>
+                        <source media="(min-width: 481px)" srcset="notepad.jpg">
+                        <source media="(max-width: 480px)" srcset="notepad.png">
+                        <img src="notepad.png" alt="Responsive Image">
+                    </picture>
                     <div class="container">
                         <h1>NotePad</h1>
                         <a class="demo" href="https://jidandev.github.io/NotePad/">Demo Project</a>
@@ -84,6 +88,6 @@
     <script>
       AOS.init();
     </script>
-    <script src="script.js?v=1.0.3"></script>
+    <script src="script.js?v=1.0.4"></script>
 </body>
 </html>

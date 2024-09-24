@@ -463,7 +463,9 @@ body {
     .about div div{
         width: 150px;
         height: 100px;
-        background-color: var(--accent-color);
+        background: url(profile.jpeg);
+        background-position: center;
+        background-size: cover;
         border-radius: 10px;
         margin-left: 10px;
     }

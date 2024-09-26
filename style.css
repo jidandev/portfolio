@@ -9,11 +9,18 @@
     --secondary-color-light: #F0F0F0; 
     --accent-color-light: #BDC3C7;
     --text-color-light: #2C3E50; 
-    --glass-dark: rgba(45, 45, 45, .3);
-    --glass-light: rgba(240, 240, 240, .3);
+    --glass-color: rgba(45, 45, 45, .3);
     --font-montserrat: 'Montserrat', sans-serif;
     --font-weight-bold: 700;
     --font-weight-semi-bold: 600;
+}
+
+body.light-theme {
+    --primary-color: #FFFFFF;
+    --secondary-color: #F0F0F0; 
+    --accent-color: #BDC3C7;
+    --text-color: #2C3E50; 
+    --glass-color: rgba(240, 240, 240, .3);
 }
 
 html {
@@ -41,6 +48,10 @@ body {
         
         gap: 130px;
     }
+    .tema {
+        color: var(--text-color);
+        transition: all .3s ease;
+    }
     nav {
         position: fixed;
         bottom: 0;
@@ -53,7 +64,7 @@ body {
         
         width: 90%;
         height: 80px;
-        background: rgba(45, 45, 45, 0.4);
+        background: var(--glass-color);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
@@ -200,7 +211,7 @@ body {
         gap: 100px;
         width: 600px;
         height: 200px;
-        background: rgba(45, 45, 45, 0.4);
+        background: var(--glass-color);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
@@ -373,7 +384,7 @@ body {
         
         width: 85%;
         height: 60px;
-        background: rgba(45, 45, 45, 0.4);
+        background: var(--glass-color);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
@@ -449,7 +460,7 @@ body {
         gap: 8px; 
         width: 300px;
         height: 120px;
-        background: rgba(45, 45, 45, 0.3);
+        background: var(--glass-color);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
@@ -558,7 +569,7 @@ body {
         gap: 40px;
         width: 300px;
         height: 120px;
-        background: rgba(45, 45, 45, 0.4);
+        background: var(--glass-color);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);

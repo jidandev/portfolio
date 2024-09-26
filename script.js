@@ -33,68 +33,12 @@ loadTheme();
 function theme(kondisi) {
     if(kondisi) {
         tema.innerHTML = `<ion-icon name="moon-outline"></ion-icon>`;
-        tema.style.color = `var(--text-color-light)`;
-        document.body.style.backgroundColor = `var(--primary-color-light)`;
-        document.querySelector('nav ul').style.background = `var(--glass-light)`;
-        for(let i = 0;i<5;i++) {
-            document.querySelectorAll('nav ul li')[i].style.backgroundColor = `var(--accent-color-light)`;
-            document.querySelectorAll('nav ul li')[i].style.color = `var(--text-color-light)`;
-        }
-        document.querySelector('.home h1').style.color = `var(--text-color-light)`;
-        document.querySelector('.home h1').style.borderColor = `var(--text-color-light)`;
-        document.querySelector('.home p').style.color = `var(--text-color-light)`;
-        document.querySelector('.about div').style.background = `var(--glass-light)`;
-        document.querySelector('.about div div').style.backgroundColor = `var(--accent-color-light)`;
-        document.querySelector('.about div h1').style.color = `var(--text-color-light)`;
-        document.querySelector('.about div h1').style.borderColor = `var(--text-color-light)`;
-        document.querySelector('.about div p').style.color = `var(--text-color-light)`;
-        document.querySelector('.about .isi h1').style.color = `var(--text-color-light)`;
-        document.querySelector('.about .isi h1').style.borderColor = `var(--text-color-light)`;
-        document.querySelector('.about .isi p').style.color = `var(--text-color-light)`;
-        document.querySelector('.project h1').style.color = `var(--text-color-light)`;
-        document.querySelector('.project h1').style.borderColor = `var(--text-color-light)`;
-        document.querySelector('.project ul li').style.background = `var(--glass-light)`;
-        document.querySelector('.project ul li h1').style.color = `var(--text-color-light)`;
-        document.querySelector('.project ul li h1').style.borderColor = `var(--text-color-light)`;
-        document.querySelector('.project ul li a').style.color = `var(--text-color-light)`;
-        document.querySelector('.project ul li .github').style.color = `var(--text-color-light)`;
-        document.querySelector('.skils h1').style.color = `var(--text-color-light)`;
-        document.querySelector('.skils h1').style.borderColor = `var(--text-color-light)`;
-        document.querySelector('.contact h1').style.color = `var(--text-color-light)`;
-        document.querySelector('.contact h1').style.borderColor = `var(--text-color-light)`;
         document.querySelector('.githubimg').style.filter = `invert(0%)`;
+        document.body.classList.add('light-theme')
     } else {
         tema.innerHTML = `<ion-icon name="sunny-outline"></ion-icon>`
-        tema.style.color = `var(--text-color)`;
-        document.body.style.backgroundColor = `var(--primary-color)`;
-        document.querySelector('nav ul').style.background = `var(--glass-dark)`;
-        for(let i = 0;i<5;i++) {
-            document.querySelectorAll('nav ul li')[i].style.backgroundColor = `var(--accent-color)`;
-            document.querySelectorAll('nav ul li')[i].style.color = `var(--text-color)`;
-        }
-        document.querySelector('.home h1').style.color = `var(--text-color)`;
-        document.querySelector('.home h1').style.borderColor = `var(--text-color)`;
-        document.querySelector('.home p').style.color = `var(--text-color)`;
-        document.querySelector('.about div').style.background = `var(--glass-dark)`;
-        document.querySelector('.about div div').style.backgroundColor = `var(--accent-color)`;
-        document.querySelector('.about div h1').style.color = `var(--text-color)`;
-        document.querySelector('.about div h1').style.borderColor = `var(--text-color)`;
-        document.querySelector('.about div p').style.color = `var(--text-color)`;
-        document.querySelector('.about .isi h1').style.color = `var(--text-color)`;
-        document.querySelector('.about .isi h1').style.borderColor = `var(--text-color)`;
-        document.querySelector('.about .isi p').style.color = `var(--text-color)`;
-        document.querySelector('.project h1').style.color = `var(--text-color)`;
-        document.querySelector('.project h1').style.borderColor = `var(--text-color)`;
-        document.querySelector('.project ul li').style.background = `var(--glass-dark)`;
-        document.querySelector('.project ul li h1').style.color = `var(--text-color)`;
-        document.querySelector('.project ul li h1').style.borderColor = `var(--text-color)`;
-        document.querySelector('.project ul li a').style.color = `var(--text-color)`;
-        document.querySelector('.project ul li .github').style.color = `var(--text-color)`;
-        document.querySelector('.skils h1').style.color = `var(--text-color)`;
-        document.querySelector('.skils h1').style.borderColor = `var(--text-color)`;
-        document.querySelector('.contact h1').style.color = `var(--text-color)`;
-        document.querySelector('.contact h1').style.borderColor = `var(--text-color)`;
         document.querySelector('.githubimg').style.filter = `invert(100%)`;
+        document.body.classList.remove('light-theme')
     }
 }
 
